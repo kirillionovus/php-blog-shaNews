@@ -123,8 +123,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             <div>
                 <label for="password" class="block text-xs font-bold uppercase tracking-wider text-slate-700">Password</label>
                 <div class="mt-2 relative">
-                    <input type="password" id="password" name="password" placeholder="Minimum 8 characters" required class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-900 placeholder-slate-400 transition-all focus:border-slate-950 focus:outline-none focus:ring-1 focus:ring-slate-950 pr-10">
-                    <button type="button" id="togglePasswordBtn" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 transition" title="Show / hide password"><svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                    <input type="password" id="password" name="password" placeholder="Your password" required class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-900 placeholder-slate-400 transition-all focus:border-slate-950 focus:outline-none focus:ring-1 focus:ring-slate-950 pr-10">
+                    <button type="button" id="togglePasswordBtn" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 transition" title="Show / hide password">
+                        <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                     </button>
                 </div>
