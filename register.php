@@ -51,19 +51,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     </style>
 </head>
 <body class="min-h-screen overflow-hidden bg-slate-100 text-slate-950 selection:bg-blue-200">
-<header class="relative z-20 flex h-18 items-center justify-between border-b border-slate-200 bg-white px-5 sm:px-8 lg:px-12">
-    <div class="flex items-center flex-1">
-        <a href="index.php" class="flex items-center gap-2 px-2 py-2 text-lm font-semibold text-slate-600 transition hover:text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 select-none">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-            </svg>
-            <span class="hidden sm:inline">HOMEPAGE</span>
-        </a>
-    </div>
-
+<header class="relative z-20 flex h-16 items-center justify-between border-b border-slate-200 bg-white px-5 sm:px-8 lg:px-12">
+    <div class="flex-1"></div>
     <div class="flex justify-center flex-1">
-        <a class="flex items-center gap-2.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700 cursor-default select-none">
-            <span class="text-lg font-extrabold tracking-[-0.03em] text-slate-950">$HANEWS</span>
+        <a href="index.php" class="flex items-center gap-2.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700 select-none" draggable="false">
+            <span class="text-[1.24em] font-extrabold tracking-[-0.03em] text-slate-950 select-none">$HANEWS</span>
         </a>
     </div>
 
@@ -90,7 +82,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 
 
-<section class="relative flex min-h-[calc(100vh-4.5rem)] items-center justify-center px-5 py-12">
+<section class="relative flex min-h-[calc(92vh-4.5rem)] items-center justify-center px-5 py-12">
+
+    <img src="assets/images/newspaper-bg.png" alt="Newspaper background" class="absolute inset-0 m-auto max-w-[1092px] w-full pointer-events-none select-none z-0 object-contain" draggable="false">
+
     <div class="relative z-10 w-full max-w-[406px] border border-slate-300 bg-white p-6 shadow-[0_12px_35px_rgba(15,23,42,0.06)] sm:p-9">
         <div class="mb-8 text-center">
             <span class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-blue-700">Registration</span>
