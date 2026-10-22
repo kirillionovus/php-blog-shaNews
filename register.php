@@ -1,6 +1,11 @@
 <?php
 require_once('config/db.php');
 
+if (isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit;
+}
+
 $message = '';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -84,7 +89,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 <section class="relative flex min-h-[calc(92vh-4.5rem)] items-center justify-center px-5 py-12">
 
-    <img src="assets/images/newspaper-bg.png" alt="Newspaper background" class="absolute inset-0 m-auto max-w-[1092px] w-full pointer-events-none select-none z-0 object-contain" draggable="false">
+    <img src="assets/images/newspaper-bg.png" alt="Newspaper background" class="absolute inset-0 m-auto max-w-[1025px] w-full pointer-events-none select-none z-0 object-contain" draggable="false">
 
     <div class="relative z-10 w-full max-w-[406px] border border-slate-300 bg-white p-6 shadow-[0_12px_35px_rgba(15,23,42,0.06)] sm:p-9">
         <div class="mb-8 text-center">
@@ -94,8 +99,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         </div>
 
         <?php if (!empty($message)): ?>
-            <div class="mb-6 rounded-xl border p-4 text-sm font-medium transition-all duration-200 <?php echo (strpos($message, 'successful') !== false || strpos($message, 'successfull') !== false) ? 'border-emerald-200 bg-emerald-50 text-emerald-800' : 'border-rose-200 bg-rose-50 text-rose-800'; ?>">
-            <div class="flex items-center gap-2"><?php if (strpos($message, 'successful') !== false || strpos($message, 'successful') !== false): ?><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 text-emerald-600">
+            <div class="mb-3 rounded-xl border p-4 text-sm font-medium transition-all duration-200 <?php echo strpos($message, 'successful') !== false ? 'border-emerald-200 bg-emerald-50 text-emerald-800' : 'border-rose-200 bg-rose-50 text-rose-800'; ?>">
+            <div class="flex items-center gap-2"><?php if (strpos($message, 'successful') !== false): ?><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 text-emerald-600">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><?php else: ?><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 text-rose-600">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0zm-9 3.75h.008v.008H12v-.008z"/></svg><?php endif; ?><span><?php echo htmlspecialchars($message); ?></span></div></div>
         <?php endif; ?>
