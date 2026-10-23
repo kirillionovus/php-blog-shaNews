@@ -34,4 +34,3 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_token'])) {
         $_SESSION['username'] = $user['username'];
     }
 }
-?>
